@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  PrintDemo
 //
-//  Created by samlee123 on 2018/9/20.
-//  Copyright © 2018年 zhuhaisandu. All rights reserved.
+//  Created by samlee123 on 2018/5/1.
+//  Copyright © 2018年 . All rights reserved.
 //
 
 #import "AppDelegate.h"
