@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D455824D21539CA1002BA9D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D455824C21539CA1002BA9D7 /* AppDelegate.m */; };
-		D455825021539CA1002BA9D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D455824F21539CA1002BA9D7 /* ViewController.m */; };
-		D455825321539CA1002BA9D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D455825121539CA1002BA9D7 /* Main.storyboard */; };
 		D455825521539CB4002BA9D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D455825421539CB4002BA9D7 /* Assets.xcassets */; };
 		D455825821539CB4002BA9D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D455825621539CB4002BA9D7 /* LaunchScreen.storyboard */; };
 		D455825B21539CB5002BA9D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D455825A21539CB5002BA9D7 /* main.m */; };
 		D455826521539CB5002BA9D7 /* PrintDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D455826421539CB5002BA9D7 /* PrintDemoTests.m */; };
 		D455827021539CB5002BA9D7 /* PrintDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D455826F21539CB5002BA9D7 /* PrintDemoUITests.m */; };
+		D455827E21539D06002BA9D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D455827D21539D05002BA9D7 /* Main.storyboard */; };
+		D455828F21539D20002BA9D7 /* ZZDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D455828021539D1B002BA9D7 /* ZZDataTool.m */; };
+		D455829021539D20002BA9D7 /* SelectionDeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D455828221539D1B002BA9D7 /* SelectionDeviceCell.m */; };
+		D455829121539D20002BA9D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D455828421539D1C002BA9D7 /* AppDelegate.m */; };
+		D455829221539D20002BA9D7 /* BillPrintingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D455828521539D1C002BA9D7 /* BillPrintingVC.m */; };
+		D455829321539D20002BA9D7 /* SelectionDeviceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D455828721539D1D002BA9D7 /* SelectionDeviceVC.m */; };
+		D455829421539D20002BA9D7 /* TagPrintingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D455828821539D1D002BA9D7 /* TagPrintingVC.m */; };
+		D455829521539D20002BA9D7 /* HomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D455828921539D1D002BA9D7 /* HomePageVC.m */; };
+		D455829621539D20002BA9D7 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = D455828C21539D1E002BA9D7 /* UIView+Toast.m */; };
+		D45582A821539D2F002BA9D7 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D455829921539D2E002BA9D7 /* ProgressHUD.m */; };
+		D45582A921539D2F002BA9D7 /* PrintSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D45582A721539D2F002BA9D7 /* PrintSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +44,6 @@
 
 /* Begin PBXFileReference section */
 		D455824821539CA1002BA9D7 /* PrintDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrintDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D455824B21539CA1002BA9D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D455824C21539CA1002BA9D7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D455824E21539CA1002BA9D7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D455824F21539CA1002BA9D7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D455825221539CA1002BA9D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D455825421539CB4002BA9D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D455825721539CB4002BA9D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D455825921539CB5002BA9D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +54,36 @@
 		D455826B21539CB5002BA9D7 /* PrintDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrintDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D455826F21539CB5002BA9D7 /* PrintDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrintDemoUITests.m; sourceTree = "<group>"; };
 		D455827121539CB5002BA9D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D455827D21539D05002BA9D7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D455827F21539D1B002BA9D7 /* BillPrintingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillPrintingVC.h; sourceTree = "<group>"; };
+		D455828021539D1B002BA9D7 /* ZZDataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZDataTool.m; sourceTree = "<group>"; };
+		D455828121539D1B002BA9D7 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		D455828221539D1B002BA9D7 /* SelectionDeviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionDeviceCell.m; sourceTree = "<group>"; };
+		D455828321539D1C002BA9D7 /* SelectionDeviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionDeviceCell.h; sourceTree = "<group>"; };
+		D455828421539D1C002BA9D7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D455828521539D1C002BA9D7 /* BillPrintingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillPrintingVC.m; sourceTree = "<group>"; };
+		D455828621539D1C002BA9D7 /* ZZDataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZDataTool.h; sourceTree = "<group>"; };
+		D455828721539D1D002BA9D7 /* SelectionDeviceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionDeviceVC.m; sourceTree = "<group>"; };
+		D455828821539D1D002BA9D7 /* TagPrintingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagPrintingVC.m; sourceTree = "<group>"; };
+		D455828921539D1D002BA9D7 /* HomePageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageVC.m; sourceTree = "<group>"; };
+		D455828A21539D1E002BA9D7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D455828B21539D1E002BA9D7 /* HomePageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageVC.h; sourceTree = "<group>"; };
+		D455828C21539D1E002BA9D7 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		D455828D21539D1F002BA9D7 /* TagPrintingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagPrintingVC.h; sourceTree = "<group>"; };
+		D455828E21539D1F002BA9D7 /* SelectionDeviceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionDeviceVC.h; sourceTree = "<group>"; };
+		D455829821539D2E002BA9D7 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		D455829921539D2E002BA9D7 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		D455829D21539D2F002BA9D7 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		D455829E21539D2F002BA9D7 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		D455829F21539D2F002BA9D7 /* BLEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEManager.h; sourceTree = "<group>"; };
+		D45582A021539D2F002BA9D7 /* ImageTranster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTranster.h; sourceTree = "<group>"; };
+		D45582A121539D2F002BA9D7 /* libMPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libMPrinter.h; sourceTree = "<group>"; };
+		D45582A221539D2F002BA9D7 /* MBLEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBLEManager.h; sourceTree = "<group>"; };
+		D45582A321539D2F002BA9D7 /* MSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDK.h; sourceTree = "<group>"; };
+		D45582A421539D2F002BA9D7 /* MWIFIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWIFIManager.h; sourceTree = "<group>"; };
+		D45582A521539D2F002BA9D7 /* PosCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PosCommand.h; sourceTree = "<group>"; };
+		D45582A621539D2F002BA9D7 /* TscCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TscCommand.h; sourceTree = "<group>"; };
+		D45582A721539D2F002BA9D7 /* PrintSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = PrintSDK.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45582A921539D2F002BA9D7 /* PrintSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,11 +135,25 @@
 		D455824A21539CA1002BA9D7 /* PrintDemo */ = {
 			isa = PBXGroup;
 			children = (
-				D455824B21539CA1002BA9D7 /* AppDelegate.h */,
-				D455824C21539CA1002BA9D7 /* AppDelegate.m */,
-				D455824E21539CA1002BA9D7 /* ViewController.h */,
-				D455824F21539CA1002BA9D7 /* ViewController.m */,
-				D455825121539CA1002BA9D7 /* Main.storyboard */,
+				D455829A21539D2F002BA9D7 /* PrintSDK */,
+				D455829721539D2E002BA9D7 /* ProgressHUD */,
+				D455828A21539D1E002BA9D7 /* AppDelegate.h */,
+				D455828421539D1C002BA9D7 /* AppDelegate.m */,
+				D455828621539D1C002BA9D7 /* ZZDataTool.h */,
+				D455828021539D1B002BA9D7 /* ZZDataTool.m */,
+				D455828121539D1B002BA9D7 /* UIView+Toast.h */,
+				D455828C21539D1E002BA9D7 /* UIView+Toast.m */,
+				D455828B21539D1E002BA9D7 /* HomePageVC.h */,
+				D455828921539D1D002BA9D7 /* HomePageVC.m */,
+				D455827F21539D1B002BA9D7 /* BillPrintingVC.h */,
+				D455828521539D1C002BA9D7 /* BillPrintingVC.m */,
+				D455828D21539D1F002BA9D7 /* TagPrintingVC.h */,
+				D455828821539D1D002BA9D7 /* TagPrintingVC.m */,
+				D455828E21539D1F002BA9D7 /* SelectionDeviceVC.h */,
+				D455828721539D1D002BA9D7 /* SelectionDeviceVC.m */,
+				D455828321539D1C002BA9D7 /* SelectionDeviceCell.h */,
+				D455828221539D1B002BA9D7 /* SelectionDeviceCell.m */,
+				D455827D21539D05002BA9D7 /* Main.storyboard */,
 				D455825421539CB4002BA9D7 /* Assets.xcassets */,
 				D455825621539CB4002BA9D7 /* LaunchScreen.storyboard */,
 				D455825921539CB5002BA9D7 /* Info.plist */,
@@ -130,6 +178,49 @@
 				D455827121539CB5002BA9D7 /* Info.plist */,
 			);
 			path = PrintDemoUITests;
+			sourceTree = "<group>";
+		};
+		D455829721539D2E002BA9D7 /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				D455829821539D2E002BA9D7 /* ProgressHUD.h */,
+				D455829921539D2E002BA9D7 /* ProgressHUD.m */,
+			);
+			path = ProgressHUD;
+			sourceTree = "<group>";
+		};
+		D455829A21539D2F002BA9D7 /* PrintSDK */ = {
+			isa = PBXGroup;
+			children = (
+				D455829B21539D2F002BA9D7 /* include */,
+				D45582A721539D2F002BA9D7 /* PrintSDK.a */,
+			);
+			path = PrintSDK;
+			sourceTree = "<group>";
+		};
+		D455829B21539D2F002BA9D7 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				D455829C21539D2F002BA9D7 /* PrintSDK */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		D455829C21539D2F002BA9D7 /* PrintSDK */ = {
+			isa = PBXGroup;
+			children = (
+				D455829D21539D2F002BA9D7 /* AsyncSocket.h */,
+				D455829E21539D2F002BA9D7 /* AsyncUdpSocket.h */,
+				D455829F21539D2F002BA9D7 /* BLEManager.h */,
+				D45582A021539D2F002BA9D7 /* ImageTranster.h */,
+				D45582A121539D2F002BA9D7 /* libMPrinter.h */,
+				D45582A221539D2F002BA9D7 /* MBLEManager.h */,
+				D45582A321539D2F002BA9D7 /* MSDK.h */,
+				D45582A421539D2F002BA9D7 /* MWIFIManager.h */,
+				D45582A521539D2F002BA9D7 /* PosCommand.h */,
+				D45582A621539D2F002BA9D7 /* TscCommand.h */,
+			);
+			path = PrintSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,9 +326,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D455827E21539D06002BA9D7 /* Main.storyboard in Resources */,
 				D455825821539CB4002BA9D7 /* LaunchScreen.storyboard in Resources */,
 				D455825521539CB4002BA9D7 /* Assets.xcassets in Resources */,
-				D455825321539CA1002BA9D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +353,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D455825021539CA1002BA9D7 /* ViewController.m in Sources */,
+				D455829621539D20002BA9D7 /* UIView+Toast.m in Sources */,
+				D455829121539D20002BA9D7 /* AppDelegate.m in Sources */,
+				D45582A821539D2F002BA9D7 /* ProgressHUD.m in Sources */,
+				D455829421539D20002BA9D7 /* TagPrintingVC.m in Sources */,
+				D455829021539D20002BA9D7 /* SelectionDeviceCell.m in Sources */,
+				D455829221539D20002BA9D7 /* BillPrintingVC.m in Sources */,
 				D455825B21539CB5002BA9D7 /* main.m in Sources */,
-				D455824D21539CA1002BA9D7 /* AppDelegate.m in Sources */,
+				D455828F21539D20002BA9D7 /* ZZDataTool.m in Sources */,
+				D455829521539D20002BA9D7 /* HomePageVC.m in Sources */,
+				D455829321539D20002BA9D7 /* SelectionDeviceVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,14 +398,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D455825121539CA1002BA9D7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D455825221539CA1002BA9D7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D455825621539CB4002BA9D7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -436,9 +526,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R7VXV35RXD;
 				INFOPLIST_FILE = PrintDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PrintDemo/PrintSDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhuhaisandu.net.PrintDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -453,9 +548,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R7VXV35RXD;
 				INFOPLIST_FILE = PrintDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PrintDemo/PrintSDK",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhuhaisandu.net.PrintDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
