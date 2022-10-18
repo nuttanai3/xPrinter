@@ -85,14 +85,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = @"未连接";
+    self.title = @"not connected";
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(connectBle:) name:ConnectBleSuccessNote object:nil];
 
 }
 
 - (void)connectBle:(NSNotification *)text{
     
-    [self.statusBtn setTitle:@"断开连接" forState:UIControlStateNormal];
+    [self.statusBtn setTitle:@"Disconnect" forState:UIControlStateNormal];
     SharedAppDelegate.isConnectedWIFI = NO;
     SharedAppDelegate.isConnectedBLE = YES ;
 
@@ -103,17 +103,17 @@
     
     if ([ _ipAddressTF.text isEqualToString:@""]) {
         
-        [ProgressHUD showError:@"请输入IP地址"];
+        [ProgressHUD showError:@"Please enter an IP address"];
         return;
     }
     
     
-    // 先断开原来的连接
+    // Disconnect the original connection first
     [self.wifiManager MDisConnect];
     
-    [ProgressHUD show:@"正在连接"];
+    [ProgressHUD show:@"connecting"];
     
-    // 连接到 wifi
+    //connect to wifi
     [self.wifiManager MConnectWithHost:_ipAddressTF.text
                                    port:(UInt16)[@"9100" integerValue]
                              completion:^(BOOL isConnect) {
@@ -130,21 +130,21 @@
     [ProgressHUD dismiss];
     SharedAppDelegate.isConnectedWIFI = YES;
     SharedAppDelegate.isConnectedBLE = NO;
-    [self.statusBtn setTitle:@"断开连接" forState:UIControlStateNormal];
+    [self.statusBtn setTitle:@"Disconnect" forState:UIControlStateNormal];
 
-    NSString *message =  @"WI-FI连接成功";
+    NSString *message =  @"WI-FI connection is successful";
     [self.view makeToast:message duration:2 Mition:CSToastMitionCenter];
 
 }
 
 
-// 断开连接
+//Disconnect
 - (void)MWIFIManagerDidDisconnected:(MWIFIManager *)manager{
     
     if (!manager.isAutoDisconnect) {
         //        self.myTab.hidden = YES;
     }
-    [self.statusBtn setTitle:@"未连接" forState:UIControlStateNormal];
+    [self.statusBtn setTitle:@"not connected" forState:UIControlStateNormal];
 
     SharedAppDelegate.isConnectedWIFI = NO;
     
@@ -167,11 +167,11 @@
 {
     if (object == self.manager && [keyPath isEqualToString:@"writePeripheral.state"])
     {
-        // 更行蓝牙的连接状态
+        // Update the connection status of bluetooth
         switch (self.manager.writePeripheral.state) {
             case CBPeripheralStateDisconnected:
             {
-                [self.statusBtn setTitle:@"未连接" forState:UIControlStateNormal];
+                [self.statusBtn setTitle:@"not connected" forState:UIControlStateNormal];
                 SharedAppDelegate.isConnectedBLE = NO;
                 
                 break;
@@ -179,14 +179,14 @@
                 
             case CBPeripheralStateConnecting:
             {
-                [self.statusBtn setTitle:@"设备正在连接" forState:UIControlStateNormal];
+                [self.statusBtn setTitle:@"device is connecting" forState:UIControlStateNormal];
                 break;
             }
             case CBPeripheralStateConnected:
             {
 
                 
-                [self.statusBtn setTitle:@"已连接" forState:UIControlStateNormal];
+                [self.statusBtn setTitle:@"connected" forState:UIControlStateNormal];
 
                 SharedAppDelegate.isConnectedBLE = YES;
                 
@@ -194,7 +194,7 @@
             }
             case CBPeripheralStateDisconnecting:
             {
-                [self.statusBtn setTitle:@"未连接" forState:UIControlStateNormal];
+                [self.statusBtn setTitle:@"not connected" forState:UIControlStateNormal];
                 SharedAppDelegate.isConnectedBLE = NO;
 
                 
@@ -213,8 +213,8 @@
     vc.callBack = ^(id x){
         SharedAppDelegate.isConnectedBLE = YES;
         SharedAppDelegate.isConnectedWIFI = NO;
-        [self.statusBtn setTitle:@"断开连接" forState:UIControlStateNormal];
-        NSString *message =  @"蓝牙连接成功";
+        [self.statusBtn setTitle:@"Disconnect" forState:UIControlStateNormal];
+        NSString *message =  @"Bluetooth connection successful";
         [self.view makeToast:message duration:2 Mition:CSToastMitionCenter];
     };
     [self.navigationController pushViewController:vc animated:YES];
