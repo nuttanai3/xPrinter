@@ -68,7 +68,7 @@
 - (IBAction)printTextAction:(id)sender {
     
     NSStringEncoding gbkEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
-    NSMutableData* dataM=[NSMutableData dataWithData:[MCommand initializePrinter]];
+    NSMutableData* dataM = [NSMutableData dataWithData:[MCommand initializePrinter]];
     int width = 58;
     [dataM appendData:[MCommand setLableWidth:width]];
     [dataM appendData:[MCommand setPrintAreaWidthWithnL:width*8%256 andnH:width*8/256]];
@@ -93,14 +93,36 @@
 //打印图片
 - (IBAction)printImageAction:(id)sender {
     
-    UIImage* img = [UIImage imageNamed:@"XinYe"];
-    NSMutableData* dataM=[NSMutableData dataWithData:[MCommand initializePrinter]];
-    [dataM appendData:[MCommand setLableWidth:30]];
+    UIImage* img = [UIImage imageNamed:@"billExample2"];
+//    UIImage* img2 = [UIImage imageNamed:@"fakeTaxi"];
+    NSMutableData* dataM = [NSMutableData dataWithData:[MCommand initializePrinter]];
     if(SharedAppDelegate.isConnectedWIFI){
         [dataM appendData:[MCommand setTempData]];
     }
-    NSData *data = [MCommand printRasteBmpWithM:RasterNolmorWH andImage:img andType:Dithering andPaperHeight:1000];
+    NSData *data = [MCommand printRasteBmpWithM:RasterNolmorWH andImage:img andType:Dithering andPaperHeight: 10000];
     [dataM appendData:data];
+//    NSStringEncoding gbkEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+//    [dataM appendData: [@"打印测试123456789abcdefghijklnmABCDEFGHIJK" dataUsingEncoding: gbkEncoding]];
+    [dataM appendData:[MCommand printAndFeedLine]];
+    [dataM appendData:[MCommand printAndFeedLine]];
+    [dataM appendData:[MCommand printAndFeedLine]];
+    [dataM appendData:[MCommand printAndFeedLine]];
+    [dataM appendData:[MCommand printAndFeedLine]];
+    [dataM appendData:[MCommand printAndFeedLine]];
+    [dataM appendData:[MCommand printAndFeedLine]];
+    [dataM appendData:[MCommand printAndFeedLine]];
+    [dataM appendData:[MCommand printAndFeedLine]];
+    [dataM appendData:[MCommand printAndFeedLine]];
+    [dataM appendData:[MCommand printAndFeedLine]];
+    [dataM appendData:[MCommand printAndFeedLine]];
+    [dataM appendData:[MCommand printAndFeedLine]];
+    [dataM appendData:[MCommand printAndFeedLine]];
+    [dataM appendData:[MCommand printAndFeedLine]];
+    [dataM appendData:[MCommand printAndFeedLine]];
+    [dataM appendData:[MCommand printAndFeedLine]];
+    [dataM appendData:[MCommand printAndFeedLine]];
+    [dataM appendData:[MCommand printAndFeedLine]];
+    [dataM appendData:[MCommand printAndFeedLine]];
     if (SharedAppDelegate.isConnectedBLE) {
         [self.manager MWriteCommandWithData:dataM];
         

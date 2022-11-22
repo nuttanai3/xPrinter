@@ -192,8 +192,18 @@
 		D455829A21539D2F002BA9D7 /* PrintSDK */ = {
 			isa = PBXGroup;
 			children = (
-				D455829B21539D2F002BA9D7 /* include */,
+				D455829D21539D2F002BA9D7 /* AsyncSocket.h */,
+				D455829E21539D2F002BA9D7 /* AsyncUdpSocket.h */,
+				D455829F21539D2F002BA9D7 /* BLEManager.h */,
+				D45582A021539D2F002BA9D7 /* ImageTranster.h */,
+				D45582A121539D2F002BA9D7 /* libMPrinter.h */,
+				D45582A221539D2F002BA9D7 /* MBLEManager.h */,
+				D45582A321539D2F002BA9D7 /* MSDK.h */,
+				D45582A421539D2F002BA9D7 /* MWIFIManager.h */,
+				D45582A521539D2F002BA9D7 /* PosCommand.h */,
 				D45582A721539D2F002BA9D7 /* PrintSDK.a */,
+				D45582A621539D2F002BA9D7 /* TscCommand.h */,
+				D455829B21539D2F002BA9D7 /* include */,
 			);
 			path = PrintSDK;
 			sourceTree = "<group>";
@@ -209,16 +219,6 @@
 		D455829C21539D2F002BA9D7 /* PrintSDK */ = {
 			isa = PBXGroup;
 			children = (
-				D455829D21539D2F002BA9D7 /* AsyncSocket.h */,
-				D455829E21539D2F002BA9D7 /* AsyncUdpSocket.h */,
-				D455829F21539D2F002BA9D7 /* BLEManager.h */,
-				D45582A021539D2F002BA9D7 /* ImageTranster.h */,
-				D45582A121539D2F002BA9D7 /* libMPrinter.h */,
-				D45582A221539D2F002BA9D7 /* MBLEManager.h */,
-				D45582A321539D2F002BA9D7 /* MSDK.h */,
-				D45582A421539D2F002BA9D7 /* MWIFIManager.h */,
-				D45582A521539D2F002BA9D7 /* PosCommand.h */,
-				D45582A621539D2F002BA9D7 /* TscCommand.h */,
 			);
 			path = PrintSDK;
 			sourceTree = "<group>";
@@ -572,8 +572,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R7VXV35RXD;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = BJ6424JKXD;
 				INFOPLIST_FILE = PrintDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -582,6 +583,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhuhaisandu.net.PrintDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = TestProject;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrintDemo.app/PrintDemo";
 			};
@@ -591,8 +594,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R7VXV35RXD;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = BJ6424JKXD;
 				INFOPLIST_FILE = PrintDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -601,6 +605,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhuhaisandu.net.PrintDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = TestProject;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrintDemo.app/PrintDemo";
 			};
@@ -609,8 +615,9 @@
 		D455827B21539CB5002BA9D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R7VXV35RXD;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = BJ6424JKXD;
 				INFOPLIST_FILE = PrintDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -619,6 +626,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhuhaisandu.net.PrintDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = TestProject;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = PrintDemo;
 			};
@@ -627,8 +636,9 @@
 		D455827C21539CB5002BA9D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R7VXV35RXD;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = BJ6424JKXD;
 				INFOPLIST_FILE = PrintDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -637,6 +647,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhuhaisandu.net.PrintDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = TestProject;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = PrintDemo;
 			};

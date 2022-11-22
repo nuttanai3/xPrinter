@@ -119,14 +119,10 @@
                              completion:^(BOOL isConnect) {
                                  
                              }];
-    
-    
-    
-    
 }
 
 - (void)MWIFIManager:(MWIFIManager *)manager didConnectedToHost:(NSString *)host port:(UInt16)port{
-    
+    NSLog(@"printer: didConnectedToHost");
     [ProgressHUD dismiss];
     SharedAppDelegate.isConnectedWIFI = YES;
     SharedAppDelegate.isConnectedBLE = NO;
@@ -140,7 +136,7 @@
 
 //Disconnect
 - (void)MWIFIManagerDidDisconnected:(MWIFIManager *)manager{
-    
+    NSLog(@"printer: MWIFIManagerDidDisconnected");
     if (!manager.isAutoDisconnect) {
         //        self.myTab.hidden = YES;
     }
