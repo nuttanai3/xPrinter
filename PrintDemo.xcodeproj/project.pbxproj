@@ -203,22 +203,6 @@
 				D45582A521539D2F002BA9D7 /* PosCommand.h */,
 				D45582A721539D2F002BA9D7 /* PrintSDK.a */,
 				D45582A621539D2F002BA9D7 /* TscCommand.h */,
-				D455829B21539D2F002BA9D7 /* include */,
-			);
-			path = PrintSDK;
-			sourceTree = "<group>";
-		};
-		D455829B21539D2F002BA9D7 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				D455829C21539D2F002BA9D7 /* PrintSDK */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		D455829C21539D2F002BA9D7 /* PrintSDK */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = PrintSDK;
 			sourceTree = "<group>";

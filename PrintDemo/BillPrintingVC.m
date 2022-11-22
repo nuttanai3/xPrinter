@@ -18,6 +18,7 @@
 @property (strong, nonatomic) MBLEManager *manager;
 /** wifi */
 @property (nonatomic, strong) MWIFIManager *wifiManager;
+@property (nonatomic, strong) MWIFIManager *wifiManager2;
     
 @end
 
@@ -54,14 +55,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.manager.delegate = self;
-    self.wifiManager.delegate = self;
-    
-    
+    _wifiManager = [[MWIFIManager alloc] init];
+    _wifiManager.delegate = self;
+    _wifiManager.callBackBlock = ^(NSData *data) {};
+    [self.wifiManager MDisConnect];
+    [self.wifiManager MConnectWithHost: @"192.168.2.110"
+                                  port:(UInt16)[@"9100" integerValue]
+                            completion:^(BOOL isConnect) {}];
+    _wifiManager2 = [[MWIFIManager alloc] init];
+    _wifiManager2.delegate = self;
+    _wifiManager2.callBackBlock = ^(NSData *data) {};
+    [self.wifiManager2 MDisConnect];
+    [self.wifiManager2 MConnectWithHost: @"192.168.2.112"
+                                   port:(UInt16)[@"9100" integerValue]
+                             completion:^(BOOL isConnect) {}];
 }
 - (void)viewWillDisappear:(BOOL)animated{
     
     self.manager.delegate = nil;
     self.wifiManager.delegate = nil;
+    self.wifiManager2.delegate = nil;
 }
 
 //打印文字
@@ -123,16 +136,19 @@
     [dataM appendData:[MCommand printAndFeedLine]];
     [dataM appendData:[MCommand printAndFeedLine]];
     [dataM appendData:[MCommand printAndFeedLine]];
-    if (SharedAppDelegate.isConnectedBLE) {
-        [self.manager MWriteCommandWithData:dataM];
-        
-    }else if(SharedAppDelegate.isConnectedWIFI){
-        [self.wifiManager MWriteCommandWithData:dataM];
-        
-    }else{
-        
-        [ProgressHUD showError:@"请连接Wi-Fi或者蓝牙"];
-    }
+    [dataM appendData:[MCommand selectCutPageModelAndCutpage:0]];
+//    if (SharedAppDelegate.isConnectedBLE) {
+//        [self.manager MWriteCommandWithData:dataM];
+//
+//    }else if(SharedAppDelegate.isConnectedWIFI){
+//        [self.wifiManager MWriteCommandWithData:dataM];
+//
+//    }else{
+//
+//        [ProgressHUD showError:@"请连接Wi-Fi或者蓝牙"];
+//    }
+    [self.wifiManager MWriteCommandWithData:dataM];
+    [self.wifiManager2 MWriteCommandWithData:dataM];
 }
 
 //打印二维码

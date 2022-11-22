@@ -41,21 +41,22 @@
     
     return _manager;
 }
-- (MWIFIManager *)wifiManager
-{
-    if (!_wifiManager)
-    {
-        _wifiManager = [MWIFIManager shareWifiManager];
-        _wifiManager.delegate = self;
-        __weak typeof(self) weakSelf = self;
-        _wifiManager.callBackBlock = ^(NSData *data) {
-            
-            NSString * str  = [weakSelf convertDataToHexStr:data];
-            weakSelf.reciveDataTextView.text = str;
-        };
-    }
-    return _wifiManager;
-}
+//- (MWIFIManager *)wifiManager
+//{
+////    if (!_wifiManager)
+////    {
+////        _wifiManager = [MWIFIManager shareWifiManager];
+//    _wifiManager = [[MWIFIManager alloc] init];
+//        _wifiManager.delegate = self;
+//        __weak typeof(self) weakSelf = self;
+//        _wifiManager.callBackBlock = ^(NSData *data) {
+//
+//            NSString * str  = [weakSelf convertDataToHexStr:data];
+//            weakSelf.reciveDataTextView.text = str;
+//        };
+////    }
+//    return _wifiManager;
+//}
 - (NSString *)convertDataToHexStr:(NSData *)data
 {
     if (!data || [data length] == 0) {
@@ -106,7 +107,15 @@
         [ProgressHUD showError:@"Please enter an IP address"];
         return;
     }
-    
+//    _wifiManager = [[MWIFIManager alloc] init];
+//    _wifiManager = [MWIFIManager shareWifiManager];
+//        _wifiManager.delegate = self;
+//        __weak typeof(self) weakSelf = self;
+//        _wifiManager.callBackBlock = ^(NSData *data) {
+//
+//            NSString * str  = [weakSelf convertDataToHexStr:data];
+//            weakSelf.reciveDataTextView.text = str;
+//        };
     
     // Disconnect the original connection first
     [self.wifiManager MDisConnect];
@@ -114,11 +123,11 @@
     [ProgressHUD show:@"connecting"];
     
     //connect to wifi
-    [self.wifiManager MConnectWithHost:_ipAddressTF.text
-                                   port:(UInt16)[@"9100" integerValue]
-                             completion:^(BOOL isConnect) {
-                                 
-                             }];
+//    [self.wifiManager MConnectWithHost:_ipAddressTF.text
+//                                   port:(UInt16)[@"9100" integerValue]
+//                             completion:^(BOOL isConnect) {
+//
+//                             }];
 }
 
 - (void)MWIFIManager:(MWIFIManager *)manager didConnectedToHost:(NSString *)host port:(UInt16)port{
